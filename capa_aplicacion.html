@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Modelo OSI</title>
+    <link rel="stylesheet" href="styler2.css">
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Capa de Aplicación</h1>
+      <nav>
+        <ul>
+          <li><button class="boton"><a href="index.html">Inicio</a></button></li>
+          <li>
+            <button id="boton-capas" class="boton" onclick="toggleMenu()">Capas</button>
+            <ul id="menu-capas">
+              <li><a href="capafisica.html">Capa física</a></li>
+              <li><a href="capa_enlace_datos.html">Capa de enlace de datos</a></li>
+              <li><a href="capa_transporte.html">Capa de transportes</a></li>
+              <li><a href="capa_presentacion.html">Capa de presentación</a></li>
+              <li><a href="capa_red.html">Capa de red</a></li>
+              <li><a href="capa_sesion.html">Capa de sesión</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="introduccion">
+        <h3>¿Qué es?</h3>
+        <p>El nivel de aplicación o capa de aplicación es el séptimo nivel del modelo OSI </p>
+        <p>Ofrece a las aplicaciones (de usuario o no) la posibilidad de acceder a los servicios de las demás capas y define los protocolos que utilizan las aplicaciones para intercambiar datos, como correo electrónico (POP y SMTP), gestores de bases de datos y protocolos de transferencia de archivos (FTP).</p>
+        <p>Cabe aclarar que el usuario normalmente no interactúa directamente con el nivel de aplicación. Suele interactuar con programas que a su vez interactúan con el nivel de aplicación pero ocultando la complejidad subyacente. Así por ejemplo un usuario no manda una petición «GET /index.html HTTP/1.0» para conseguir una página en html, ni lee directamente el código html/xml. O cuando chateamos con el Mensajero Instantáneo, no es necesario que codifiquemos la información y los datos del destinatario para entregarla a la capa de Presentación (capa 6) para que realice el envío del paquete</p>
+        <div style="text-align: center;">
+          <video controls>
+              <source src="fisica.mov" type="video/mp4">
+              Tu navegador no soporta la etiqueta video.
+            </video>
+      </div>
+    <p>Suministra servicios de red a las aplicaciones del usuario. Difiere de las demás capas debido a que no proporciona servicios a ninguna otra capa OSI, sino solamente a aplicaciones que se encuentran fuera del modelo OSI. Algunos ejemplos de aplicaciones son los programas de hojas de cálculo, de procesamiento de texto y los de las terminales bancarias. La capa de aplicación establece la disponibilidad de los potenciales socios de comunicación, sincroniza y establece acuerdos sobre los procedimientos de recuperación de errores y control de la integridad de los datos. Si desea recordar a la Capa 7 en la menor cantidad de palabras posible, piense en los navegadores de Web. </p>
+      </section>
+      <section id="protocolos">
+        <h4>Protocolos</h4>
+        <img src="protocolos-01_0.png" alt="Imagen del modelo OSI" width="600">
+        <ul>
+          <li><strong>Protocolo de servicio de nombres de dominios (DNS):</strong> Se utiliza para resolver nombres de Internet en direcciones IP.</li>
+          <br><li><strong>Telnet:</strong> Protocolo de emulación de terminal que se utiliza para proporcionar acceso remoto a servidores y dispositivos de red.</li>
+          <br><li><strong>Protocolo bootstrap (BOOTP):</strong> Un precursor al protocolo DHCP. Protocolo de red que se utiliza para obtener información de dirección IP durante el arranque.</li>
+          <br><li><strong>Protocolo de configuración dinámica de host (DHCP):</strong> Se utiliza para asignar una dirección IP, una máscara de subred, un gateway predeterminado y un servidor DNS a un host.</li>
+          <br><li><strong>Protocolo de transferencia de hipertexto (HTTP):</strong> Se utiliza para transferir archivos que conforman las páginas Web de la World Wide Web.</li>
+          <br><li><strong>Protocolo de transferencia de archivos (FTP):</strong> Se utiliza para la transferencia interactiva de archivos entre sistemas.</li>
+          <br><li><strong>Protocolo trivial de transferencia de archivos (TFTP):</strong> Se utiliza para la transferencia activa de archivos sin conexión.</li>
+          <br><li><strong>Protocolo simple de transferencia de correo (SMTP):</strong> Se utiliza para la transferencia de mensajes y archivos adjuntos de correo electrónico.</li>
+          <br><li><strong>Protocolo de oficina de correos (POP):</strong> Lo utilizan los clientes de correo electrónico para recuperar el correo electrónico de un servidor remoto.</li>
+          <br><li><strong>Protocolo de acceso a mensajes de Internet (IMAP):</strong> Otro protocolo para la recuperación de correo electrónico.</li>
+        </ul>
+      </section>
+      
+    </main>
+    <footer>
+      <p>Juan Pablo Delgado y Didier Ortega &copy; 2023</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Modelo OSI</title>
+    <link rel="stylesheet" href="styler3.css">
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Capa de transporte</h1>
+      <nav>
+        <ul>
+          <li><button class="boton"><a href="index.html">Inicio</a></button></li>
+          <li>
+            <button id="boton-capas" class="boton" onclick="toggleMenu()">Capas</button>
+            <ul id="menu-capas">
+              <li><a href="capa_enlace_datos.html">Capa de enlace de datos</a></li>
+              <li><a href="capa_aplicacion.html">Capa de aplicación</a></li>
+              <li><a href="capafisica.html">Capa de transportes</a></li>
+              <li><a href="capa_presentacion.html">Capa de presentación</a></li>
+              <li><a href="capa_red.html">Capa de red</a></li>
+              <li><a href="capa_sesion.html">Capa de sesión</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="introduccion">
+        <h3>¿Qué es?</h3>
+        <p>El nivel de transporte o capa de transporte es el cuarto nivel del modelo OSI,1​ y está encargado de la transferencia libre de errores de los datos entre el emisor y el receptor, aunque no estén directamente conectados, así como de mantener el flujo de la red. Es la base de toda la jerarquía de protocolo. La tarea de esta capa es proporcionar un transporte de datos confiable y económico de la máquina de origen a la máquina destino, independientemente de las de redes físicas en uno. Sin la capa transporte, el concepto total de los protocolos en capas tendría poco sentido.</p>
+        <div style="text-align: center;">
+            <video controls>
+                <source src="transporte.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta video.
+              </video>
+        </div>
+      <p>La capa de transporte intenta suministrar un servicio de transporte de datos que aísla las capas superiores de los detalles de implementación del transporte. Específicamente, temas como la confiabilidad del transporte entre dos hosts es responsabilidad de la capa de transporte. Al proporcionar un servicio de comunicaciones, la capa de transporte establece, mantiene y termina adecuadamente los circuitos virtuales. Al proporcionar un servicio confiable, se utilizan dispositivos de detección y recuperación de errores de transporte. Si desea recordar a la Capa 4 en la menor cantidad de palabras posible, piense en calidad de servicio y confiabilidad.</p>
+      <p>En esta capa se manejan usualmente dos protocolos, los cuales son el TCP y UDP, sus caracteísticas principales son las siguientes:</p>
+      </section>
+      <section id="TCP" style="display: flex; flex-direction: row; align-items: center;">
+        <img src="tcp.jfif" alt="Imagen del modelo OSI" width="600" style="flex: 1;">
+        <div style="flex: 1; margin-left: 20px;">
+            <h4>TCP</h4>
+            <p>El Protocolo TCP/IP o Transfer Control Protocol consiste en un acuerdo estandarizado sobre el que se realiza la transmisión de datos entre los participantes de una red informática.</p>
+            <p>Los programas que forman redes de datos en una red de ordenadores emplean el protocolo TCP para crear conexiones entre sí, de forma que se pueda garantizar el flujo de datos entre las partes. A través de este protocolo se asegura que los datos lleguen a su destino en el mismo orden que se transfirieron y sin errores.</p>
+            <p>La inmensa mayoría de comunicaciones que se realizan en internet utilizan el protocolo TCP IP, como es el caso de navegadores, programas de intercambio de ficheros, servicios FTP y un largo etcétera.</p>
+            <div style="font-size: 18px;">
+                <p><strong>Caracteristicas</strong></p>
+            </div>
+            <p>Para saber cómo funciona el protocolo TCP es necesario tener en cuenta que se trata de un estándar que se basa en la transmisión bidireccional de la información.</p>
+            <p>Imaginemos una comunicación por vía telefónica, en la que tanto el emisor como el receptor establecen una comunicación entre sí. Pues esto sería similar al funcionamiento del TCP.</p>
+            <p>En este caso, la comunicación se realizaría en base a paquetes o segmentos, que funcionarían como las unidades básicas de transmisión.</p>
+            <p>Tanto la conexión entre terminales, como la transmisión de los datos, es llevada a cabo por un software TCP, el cual se ejecuta dentro del conjunto de protocolos de red del sistema operativo.</p>
+            <p>Las aplicaciones de red, como los servidores o los navegadores de internet, cuentan con interfaces que permiten activar este software TCP.</p>
+            <p>Para establecer la conexión, es necesario que se reconozcan dos puntos de acceso y destino (cliente y servidor). Sin embargo, no importa qué parte hace de cliente y cuál hace de servidor, Lo único que necesita el software TCP para establecer la conexión es que cada una de las partes cuente con una dirección IP y un puerto asignado.</p>
+        </div>
+    </section> 
+      <section id="UDP"  style="display: flex; flex-direction: row; align-items: center;">
+       
+        <div style="flex: 1; margin-right: 20px;">
+            <h5>UDP</h5>
+            <p>El protocolo de datagramas de usuario, abreviado como UDP, es un protocolo que permite la transmisión sin conexión de datagramas en redes basadas en IP. Para obtener los servicios deseados en los hosts de destino, se basa en los puertos que están listados como uno de los campos principales en la cabecera UDP.</p>
+            <p>Como muchos otros protocolos de red, UDP pertenece a la familia de protocolos de Internet, por lo que debe clasificarse en el nivel de transporte y, en consecuencia, se encuentra en una capa intermedia entre la capa de red y la capa de aplicación.</p>
+            
+           <p>La capa física le proporciona servicios a la capa de enlaces de datos con el objetivo que esta le proporcione servicios a la capa de red. La capa física recibe un flujo de bits e intenta enviarlo al destino, no siendo su responsabilidad entregarlos libre de errores. La capa de enlace de datos es la encargada de detectar y corregir los errores. Los errores pueden consistir en una mayor o menor cantidad de bits recibidos o diferencias en los valores que se emitieron y en los que se recibieron.</p>
+    <p>Un método común de detección de errores es que la capa de enlace de datos separe el flujo en tramas separadas y que realice la suma de verificación de cada trama. Cuando una trama llega a su destino se recalcula la suma de verificación. Si es distinta de la contenida en la trama es porque ha ocurrido un error y la capa de enlace debe solucionarlo. </p>
+    <div style="font-size: 18px;">
+        <p><strong>Caracteristicas</strong></p>
+    </div>
+    <ul>
+        <li>
+          <strong>El protocolo UDP funciona sin conexión:</strong> el protocolo UDP se caracteriza porque permite el envío de datagramas a través de la red sin que se haya establecido previamente una conexión entre el emisor y el receptor. Los datagramas respectivos se envían a la dirección IP preferida de la secuencia especificando el puerto de destino, sin que sea necesario que el ordenador asociado al mismo tenga que dar una respuesta. No obstante, cuando los paquetes tienen que ser devueltos al emisor, existe la posibilidad de incluir en la cabecera UDP información sobre el puerto de origen.
+        </li><br>
+        <li>
+          <strong>utiliza puertos:</strong> al igual que el TCP, el protocolo UDP utiliza puertos para permitir que los datagramas se transfieran a los protocolos correctos, es decir, a las aplicaciones elegidas del sistema de destino. Los puertos quedan definidos mediante un número conforme a un rango de valores válidos, estando reservado el rango de 0 a 1023 para los servicios fijos.
+        </li><br>
+        <li>
+          <Strong>El protocolo UDP permite una comunicación rápida y sin retardos:</Strong> el protocolo de transporte es el adecuado para una transmisión de datos rápida debido a que no hay que llevar a cabo una configuración de la conexión. Esto resulta también del hecho de que la pérdida de un paquete individual afecta exclusivamente a la calidad de la transmisión. En el caso de conexiones TCP, en cambio, se intenta reenviar de nuevo los paquetes perdidos de forma automática, lo que provoca que todo el proceso de transmisión se detenga.
+        </li><br>
+        <li>
+          <strong>protocolo UDP no ofrece ninguna garantía de seguridad e integridad de los datos:</strong> la ausencia de acuse de recibo mutuo entre el emisor y el receptor garantiza que la velocidad de transmisión en el protocolo UDP sea excelente; no obstante, el protocolo no puede garantizar la seguridad ni la integridad de los datagramas. Tampoco puede garantizar el orden de los paquetes enviados. Por ello, los servicios que utilizan UDP deben aplicar sus propias medidas de corrección y protección.
+        </li><br>
+      </ul>
+      
+         
+        </div>
+        <img src="udp.jfif"Imagen del modelo OSI" width="600" style="flex: 1;">
+    </section>
+    <section id="comparison-table">
+        <h6> Comparacion UTP-UDP</h6>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>TCP</th>
+                    <th>UDP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Conexión</td>
+                    <td>Conexión orientada a la sesión</td>
+                    <td>Conexión no orientada a la sesión</td>
+                </tr>
+                <tr>
+                    <td>Fiabilidad</td>
+                    <td>Alta</td>
+                    <td>Baja</td>
+                </tr>
+                <tr>
+                    <td>Control de flujo</td>
+                    <td>Sí</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Control de congestión</td>
+                    <td>Sí</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Segmentación</td>
+                    <td>Sí</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Velocidad</td>
+                    <td>Lenta</td>
+                    <td>Rápida</td>
+                </tr>
+                <tr>
+                    <td>Aplicaciones</td>
+                    <td>Aplicaciones que requieren alta fiabilidad y control de flujo, como transferencia de archivos, correo electrónico, navegación web, etc.</td>
+                    <td>Aplicaciones que requieren velocidad y poco control, como streaming de video, videojuegos en línea, etc.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    </main>
+    <footer>
+      <p>Juan Pablo Delgado y Didier Ortega &copy; 2023</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Modelo OSI</title>
+    <link rel="stylesheet" href="styler2.css">
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Capa de enlace de datos</h1>
+      <nav>
+        <ul>
+          <li><button class="boton"><a href="index.html">Inicio</a></button></li>
+          <li>
+            <button id="boton-capas" class="boton" onclick="toggleMenu()">Capas</button>
+            <ul id="menu-capas">
+              <li><a href="capafisica.html">Capa física</a></li>
+              <li><a href="capa_aplicacion.html">Capa de aplicación</a></li>
+              <li><a href="capa_transporte.html">Capa de transportes</a></li>
+              <li><a href="capa_presentacion.html">Capa de presentación</a></li>
+              <li><a href="capa_red.html">Capa de red</a></li>
+              <li><a href="capa_sesion.html">Capa de sesión</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="introduccion">
+        <h3>¿Qué es?</h3>
+        <p>es la segunda capa del modelo OSI,​ es responsable de la transferencia fiable de información a través de un circuito de transmisión de datos. 2​ Recibe peticiones de la capa de red y utiliza los servicios de la capa física. <br><br> La capa de enlace de datos proporciona tránsito de datos confiable a través de un enlace físico. Al hacerlo, la capa se ocupa del direccionamiento físico (comparado con el lógico) , la topología de red, el acceso a la red, la notificación de errores, entrega ordenada de tramas y control de flujo. Si desea recordar la Capa 2 en la menor cantidad de palabras posible, piense en tramas y control de acceso al medio. </p>
+        <img src="enlace.jpg" alt="Imagen del modelo OSI" width="600">
+      </section>
+      <section id="trama">
+        <h4>¿Como se conforma una trama?</h4>
+        <p>El tramado de datos es un proceso que se utiliza en redes de computadoras para dividir un stream de bits en tramas más pequeñas. Cada trama contiene un encabezado y un tráiler que contienen información de control, como direccionamiento y verificación de errores, y un campo de datos que contiene el mensaje real. <br><br>
+        Este proceso permite que las señales físicas sean recibidas por los nodos y decodificadas en paquetes en el destino.<be><br> El proceso de tramado de datos funciona mediante la inserción de información de control en el encabezado y el tráiler de cada trama. El encabezado contiene información como el direccionamiento y la secuencia de la trama, mientras que el tráiler contiene información como la verificación de errores y la confirmación de recepción.<br><br> Los nodos receptores utilizan la información de control para identificar el comienzo y el final de cada trama, y para determinar qué bits representan una dirección o un campo de datos. </p>
+        <img src="tramas.jpg" alt="Imagen del modelo OSI" width="600">
+      </section>
+      <section id="formateo">
+        <h5>Formateo de datos para la transmision</h5>
+        <img src="formateo.jpg" alt="Imagen del modelo OSI" width="600">
+        <ul>
+            <li> <Strong>Campos indicadores de comienzo y detención:</strong>. Límites de comienzo y finalización de la trama.</li> 
+                <li> <Strong>Campo tipo:</strong>. el tipo de PDU contenido en la trama.</li> 
+                    <li> <Strong>Calidad:</strong>. campos de control.</li> 
+                        <li> <Strong>Campo de datos:</strong>. carga de tramas (Paquete de capa de red).</li> 
+        </ul>
+        <p>Campos en el extremo final de la trama desde el tráiler. Estos campos se utilizan para la detección de errores y marcan
+            el final de la trama. </p>
+            <p> No todos los protocolos incluyen todos estos campos. Los estándares para un protocolo de enlace de datos definen el formato real de la trama. </p>
+       
+
+
+        
+      </section>
+    </main>
+    <footer>
+      <p>Juan Pablo Delgado y Didier Ortega &copy; 2023</p>
+    </footer>
+  </body>
+</html>

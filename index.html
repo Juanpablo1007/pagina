@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Modelo OSI</title>
+    <link rel="stylesheet" href="styler.css">
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Modelo OSI</h1>
+      <h2>Capas</h2>
+      <nav>
+        <ul>
+          <li><button class="boton"><a href="capafisica.html">Física</a></button></li>
+          <li><button class="boton"><a href="capa_enlace_datos.html">Enlace de datos</a></button></li>
+          <li><button class="boton"><a href="capa_red.html">Red</a></li>
+          <li><button class="boton"><a href="capa_transporte.html">Transporte</a></button></li>
+          <li><button class="boton"><a href="capa_sesion.html">Sesión</a></button></li>
+          <li><button class="boton"><a href="capa_presentacion.html">Presentación</a></button></li>
+          <li><button class="boton"><a href="capa_aplicacion.html">Aplicación</a></button></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="introduccion">
+        <h3>¿Que es?</h3>
+        <p>El modelo OSI (Open Systems Interconnection) es un modelo de referencia para la comunicación entre sistemas de comunicaciones en red. Fue creado por la ISO (Organización Internacional de Normalización) en 1984 y consta de siete capas que describen las funciones de la comunicación en una red de computadoras. <br> <br>
+
+            Cada capa del modelo OSI se encarga de una parte específica de la comunicación, desde la transmisión física de datos hasta la presentación de información al usuario final. El modelo OSI ayuda a los desarrolladores de redes y sistemas a diseñar, implementar y mantener redes de computadoras interoperables y escalables.</p>
+        <img src="modelo-OSI.jpg" alt="Imagen del modelo OSI"  width="600">
+      </section>
+      <section id="Capas">
+        <h4>Las capas</h3>
+        <p>A los usuarios puede parecerles que la comunicación entre dos ordenadores es algo trivial. Y, sin embargo, en lo que concierne a la transmisión de datos en una red, tienen que llevarse a cabo numerosas tareas y cumplirse determinados requisitos en cuanto a fiabilidad, seguridad e integridad, lo que ha puesto de manifiesto la necesidad de dividir la comunicación en red por capas. Cada una de ellas está orientada a una tarea diferente, por lo que los estándares solo cubren una parte del modelo de capas. Este tiene una estructura jerárquica, es decir, que cada capa tiene acceso a una inferior por medio de una interfaz y la pone a disposición para las capas que están por encima de ella. Este principio tiene dos ventajas esenciales:</p>
+			<ul>
+				<li>Las tareas y requisitos que han de realizarse y cumplirse están claramente definidos. Los estándares para cada capa pueden desarrollarse de manera independiente.</li>
+				<li>Debido a que cada una de las capas está delimitada con independencia de las otras, los cambios realizados en las normas de una de ellas no influyen en los procesos que se están desarrollando en las otras capas, lo que facilita la introducción de nuevas normas.</li>
+			</ul>
+            <img src="capas-modelo-osi.jpg" alt="Imagen del modelo OSI"  width="200">
+      </section>
+      <section id="encapsulamiento">
+        <h5>Encapsulamiento y Desencapsulamiento</h4>
+        <p>
+            Los paquetes de datos no solo recorren cada capa del modelo OSI, sino también el sistema del remitente y el sistema de destino. Cualquier otro dispositivo por el que deba pasar un paquete de datos forma parte de las capas 1 y 3. El correo electrónico del ejemplo pasa por el router como señal física antes de avanzar por Internet. Esta se establece en la capa 3 del protocolo OSI y solo procesa información de las tres primeras capas, sin tener en cuenta las capas que van desde la 4 a la 7. Para poder acceder a datos importantes, el router tiene que descomprimir (“desencapsular”) el paquete de datos encapsulado y, en este proceso, se recorren las diferentes capas OSI en orden inverso. <br> <br> 
+            
+            En primer lugar, se produce la decodificación de señales en la capa de transferencia de bits y, a continuación, se leen las direcciones MAC de la capa 2 y las direcciones IP y los protocolos de enrutamiento de la capa 3. Con estos datos, el router ya se encuentra en condiciones de tomar una decisión en cuanto a su reenvío. El paquete de datos, encapsulado de nuevo y basándose en la información obtenida, puede ser reenviado entonces a la próxima estación, en su camino hacia el sistema de destino. <br> <br> 
+            
+            Por regla general, en la transmisión de datos participa más de un router y en ellos tiene lugar el proceso de encapsulado y desencapsulado hasta que el paquete de datos llega a su destino (en este ejemplo, un servidor de correo electrónico) en forma de una señal física. El paquete de datos también pasa, aquí, por el proceso de desencapsulado, para lo que se recorrerán desde la primera hasta la séptima capa del modelo OSI. El mensaje enviado a través del cliente de correo electrónico llegará, por lo tanto, al servidor de correo electrónico, donde estará disponible para que otro cliente de correo electrónico pueda acceder a él.</p>
+			
+            <img src="ecapsulamiento.jpg" alt="imagen del ecapsulamiento"  width="500">
+      </section>
+    </main>
+    <footer>
+        
+      <p>Juan Pablo Delgado y Didier Ortega  &copy; 2023</p>
+    </footer>
+  </body>
+</html>
