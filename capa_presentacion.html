@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Modelo OSI</title>
+    <link rel="stylesheet" href="styler2.css">
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Capa de presentacion</h1>
+      <nav>
+        <ul>
+          <li><button class="boton"><a href="index.html">Inicio</a></button></li>
+          <li>
+            <button id="boton-capas" class="boton" onclick="toggleMenu()">Capas</button>
+            <ul id="menu-capas">
+              <li><a href="capa_enlace_datos.html">Capa de enlace de datos</a></li>
+              <li><a href="capa_aplicacion.html">Capa de aplicación</a></li>
+              <li><a href="capa_transporte.html">Capa de transportes</a></li>
+              <li><a href="capafisica.html">Capa de presentación</a></li>
+              <li><a href="capa_red.html">Capa de red</a></li>
+              <li><a href="capa_sesion.html">Capa de sesión</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <section id="introduccion">
+            <h3>¿Qué es?</h3>
+           <p> El nivel de presentación o capa de presentación es el sexto nivel del Modelo OSI, y es el que se encarga de la representación de la información, de manera que aunque distintos equipos puedan tener diferentes representaciones internas de caracteres (ASCII, Unicode, EBCDIC), números (little-endian tipo Intel, big-endian tipo Motorola), sonido o imágenes, los datos lleguen de manera reconocible.</p>
+            <p>esta capa es la encargada de manejar las estructuras de datos abstractas y realizar las conversiones de representación de datos necesarias para la correcta interpretación de los mismos. </p>
+            <img src="presentacion.jpg.crdownload" alt="Imagen del modelo OSI" width="600">
+            <p>La capa de presentación es la encargada de:</p>
+            <ul>
+              <li>Definir el formato de los datos que se van a intercambiar entre las aplicaciones y ofrecer un conjunto de servicios de transformación de datos.</li>
+              <li>Definir la sintaxis utilizada entre entidades de aplicación y proporcionar los medios para la selección y modificación de la representación utilizada.</li>
+              <li>Codificar los datos en modo estándar (enteros, reales, caracteres, etc.) y realizar funciones de compresión y cifrado de datos.</li>
+            </ul>
+      
+          </section>
+          <section id="cifrado">
+            <h4>Cifrado de datos</h4>
+            
+           <p>El cifrado de los datos protege la información durante la transmisión. Las transacciones financieras utilizan el cifrado para proteger la información confidencial que se envía a través de Internet. Se utiliza una clave de cifrado para cifrar los datos en el lugar origen y luego descifrarlos en el lugar destino.</p>
+           <p>Existen dos tipos de cifrado:</p>
+           <ul>
+            <li> <Strong> Cifrado simetrico: </Strong>  Consiste en el uso una única clave para cifrar y descifrar, esta es conocida como clave privada y tiene como característica principal que es robusta.</li>
+            <li> <Strong> Cifrado asimetrico: </Strong>  Consiste en el uso de dos claves, una se usa para cifrar (clave pública) y otra para descifrar (clave privada).</li>
+           </ul>
+           <img src="cifrado.webp"Imagen del modelo OSI" width="600">
+          </section>
+          
+        </main>
+        <footer>
+          <p>Juan Pablo Delgado y Didier Ortega &copy; 2023</p>
+        </footer>
+      </body>
+    </html>
