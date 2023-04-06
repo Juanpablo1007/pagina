@@ -55,6 +55,11 @@ body {
     font-size: 20px;
     text-align: center;
   }
+  h6 {
+    color: #fd0909;
+    font-size: 20px;
+    text-align: center;
+  }
  
   
   img {
@@ -93,6 +98,18 @@ body {
     }
     100% {
       transform: translateY(-50px);
+    }
+    boton-descarga {
+      background-color: #333; /* Color de fondo */
+      border: none; /* Sin borde */
+      color: white; /* Color de texto */
+      padding: 10px 20px; /* Espacio alrededor del texto */
+      text-align: center; /* Centrar el texto */
+      text-decoration: none; /* Sin subrayado */
+      display: inline-block; /* Hacer que el botón sea inline */
+      font-size: 16px; /* Tamaño de fuente */
+      border-radius: 5px; /* Redondear los bordes */
+      cursor: pointer; /* Cambiar el cursor al pasar por encima */
     }
   }
   
