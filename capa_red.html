@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Modelo OSI</title>
+    <link rel="stylesheet" href="styler2.css">
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Capa de red</h1>
+      <nav>
+        <ul>
+          <li><button class="boton"><a href="index.html">Inicio</a></button></li>
+          <li>
+            <button id="boton-capas" class="boton" onclick="toggleMenu()">Capas</button>
+            <ul id="menu-capas">
+                
+              <li><a href="capafisica.html">Capa física</a></li>
+              <li><a href="capa_aplicacion.html">Capa de aplicación</a></li>
+              <li><a href="capa_transporte.html">Capa de transportes</a></li>
+              <li><a href="capa_presentacion.html">Capa de presentación</a></li>
+              <li><a href="capa_enlace_datos.html">Capa de red</a></li>
+              <li><a href="capa_sesion.html">Capa de sesión</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="introduccion">
+        <h3>¿Qué es?</h3>
+       <p>La capa de red es responsable de facilitar la transferencia de datos entre dos redes diferentes. Si los dispositivos que se comunican se encuentran en la misma red, entonces la capa de red no es necesaria. Esta capa divide los segmentos de la capa de transporte en unidades más pequeñas, llamadas paquetes, en el dispositivo del emisor, y vuelve a juntar estos paquetes en el dispositivo del receptor. La capa de red también busca la mejor ruta física para que los datos lleguen a su destino; esto se conoce como enrutamiento.</p>
+        <img src="red.png" alt="Imagen del modelo OSI" width="600">
+        <div style="font-size: 18px;">
+            <p><strong>Orientación de conexión</strong></p>
+        </div>
+        <p>Hay dos formas en las que el nivel de red puede funcionar internamente, pero independientemente de que la red funcione internamente con datagramas o con circuitos virtuales puede dar hacia el nivel de transporte un servicio orientado a conexión:</p>
+        <ul>
+            <li> <strong> Datagrama: </strong> Cada paquete se encamina independientemente, sin que el origen y el destino tengan que pasar por un establecimiento de comunicación previo.</li>
+            <br>
+            <li> <strong> circuitos virtuales: </strong>  En una red de circuitos virtuales dos equipos que quieran comunicarse tienen que empezar por establecer una conexión. Durante este establecimiento de conexión, todos los routers que haya por el camino elegido reservarán recursos para ese circuito virtual específico.</li>
+          </ul>
+          <img src="datagrama.png" alt="Imagen del modelo OSI" width="600">
+      </section>
+      <section id="Tipos servicio">
+        <h4>Tipos de servicio</h4>
+        <ul>
+            <li> <strong> Servicios no orientados a la conexión (CLNS) </strong> paquete debe llevar la dirección destino, y con cada uno, los nodos de la red deciden el camino que se debe seguir. Existen muchas técnicas para realizar esta decisión, como por ejemplo comparar el retardo que sufriría en ese momento el paquete que se pretende transmitir según el enlace que se escoja dependiendo del tipo de red.</li>
+            <br>
+            <li> <strong>Servicios orientados a la conexión (CONS): </strong>  Sólo el primer paquete de cada mensaje tiene que llevar la dirección destino. Con este paquete se establece la ruta que deberán seguir todos los paquetes pertenecientes a esta conexión. Cuando llega un paquete que no es el primero se identifica a que conexión pertenece y se envía por el enlace de salida adecuado, según la información que se generó con el primer paquete y que permanece almacenada en cada conmutador o nodo.</li>
+          </ul>
+        <img src="cons.png" alt="Imagen del modelo OSI" width="600">
+      </section>
+      <section id="protocolo">
+        <h5>Protocolos</h5>
+        <table border="1">
+            <tr>
+              <th>Protocolo</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <td>Protocolo IP</td>
+              <td>El protocolo IP y sus protocolos de enrutamiento asociados son posiblemente la parte más significativa del conjunto TCP/IP. El protocolo IP se encarga de:</td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;Direcciones IP</td>
+              <td>Las convenciones de direcciones IP forman parte del protocolo IP. Cómo diseñar un esquema de direcciones IPv4 introduce las direcciones IPv4 y Descripción general de las direcciones IPv6 las direcciones IPv6.</td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;Comunicaciones de host a host</td>
+              <td>El protocolo IP determina la ruta que debe utilizar un paquete, basándose en la dirección IP del sistema receptor.</td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;Formato de paquetes</td>
+              <td>El protocolo IP agrupa paquetes en unidades conocidas como datagramas. Puede ver una descripción completa de los datagramas en Capa de Internet: preparación de los paquetes para la entrega.</td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;Fragmentación</td>
+              <td>Si un paquete es demasiado grande para su transmisión a través del medio de red, el protocolo IP del sistema de envío divide el paquete en fragmentos de menor tamaño. A continuación, el protocolo IP del sistema receptor reconstruye los fragmentos y crea el paquete original.</td>
+            </tr>
+            <tr>
+              <td>Protocolo ARP</td>
+              <td>El protocolo de resolución de direcciones (ARP) se encuentra conceptualmente entre el vínculo de datos y las capas de Internet. ARP ayuda al protocolo IP a dirigir los datagramas al sistema receptor adecuado asignando direcciones Ethernet (de 48 bits de longitud) a direcciones IP conocidas (de 32 bits de longitud).</td>
+            </tr>
+            <tr>
+              <td>Protocolo ICMP</td>
+              <td>El protocolo de mensajes de control de Internet (ICMP) detecta y registra las condiciones de error de la red. ICMP registra:</td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;Paquetes soltados</td>
+              <td>Paquetes que llegan demasiado rápido para poder procesarse.</td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;Fallo de conectividad</td>
+              <td>No se puede alcanzar un sistema de destino.</td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;Redirección</td>
+              <td>Redirige un sistema de envío para utilizar otro enrutador.</td>
+            </tr>
+          </table>
+          
+
+
+        
+      </section>
+    </main>
+    <footer>
+      <p>Juan Pablo Delgado y Didier Ortega &copy; 2023</p>
+    </footer>
+  </body>
+</html>
